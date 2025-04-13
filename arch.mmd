@@ -1,0 +1,6 @@
+graph LR
+A[User uploads CSV to Drive folder] --> B[Drive triggers Push Notification]
+B --> C[Pub/Sub Topic receives event]
+C --> D[Cloud Function (Python) subscribes to topic]
+D --> E[Python downloads file, masks PII]
+E --> F[Masked file uploaded back to Drive]
